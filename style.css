@@ -484,3 +484,10 @@ footer {
 #contato {
     background-color: #2b0601;
 }
+
+#mensagem-sucesso {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
