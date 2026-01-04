@@ -22,188 +22,166 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="container hero-content">
             <h1>Apolo Análise de Dados</h1>
             <p>Transforme dados em decisões estratégicas para o seu negócio</p>
-            <button class="cta-button" onclick="scrollToContact()">
+            <button class="cta-button" onclick="document.getElementById('contato').scrollIntoView()">
                 Entre em Contato
             </button>
         </div>
     </section>
 
     <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <div class="services">
-            <div class="service-card">
-                <h3><img src="grafic.png" alt="Ícone de Gráfico" class="icone-titulo"> Análise Exploratória</h3>
-                <p>Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
-            </div>
-            <div class="service-card">
-                <h3><img src="business-intelligence.png" alt="Ícone de Business Intelligence" class="icone-titulo"> Business Intelligence</h3>
-                <p>Dashboards interativos e relatórios personalizados para monitorar KPIs e apoiar decisões estratégicas em tempo real.</p>
-            </div>
-            <div class="service-card">
-                <h3><img src="analysis.png" alt="Ícone de Modelagem Preditiva" class="icone-titulo"> Modelagem Preditiva</h3>
-                <p>Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
-            </div>
-            <div class="service-card">
-                <h3><img src="database.png" alt="Ícone de Consultoria Estratégica" class="icone-titulo"> Consultoria Estratégica</h3>
-                <p>Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
-            </div>
-            <div class="service-card">
-                <h3><img src="empathy.png" alt="Ícone de ETL e Integração" class="icone-titulo"> ETL e Integração</h3>
-                <p>Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
-            </div>
-            <div class="service-card">
-                <h3><img src="team.png" alt="Ícone de Otimização de Processos" class="icone-titulo"> Otimização de Processos</h3>
-                <p>Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3><img src="grafic.png" alt="Ícone de Gráfico" class="icone-titulo"> Análise Exploratória</h3>
+                    <p>Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
+                </div>
+                <div class="service-card">
+                    <h3><img src="business-intelligence.png" alt="Ícone de BI" class="icone-titulo"> Business Intelligence</h3>
+                    <p>Dashboards interativos e relatórios personalizados para monitorar KPIs e apoiar decisões estratégicas em tempo real.</p>
+                </div>
+                <div class="service-card">
+                    <h3><img src="analysis.png" alt="Ícone de Modelagem" class="icone-titulo"> Modelagem Preditiva</h3>
+                    <p>Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
+                </div>
+                <div class="service-card">
+                    <h3><img src="database.png" alt="Ícone de Consultoria" class="icone-titulo"> Consultoria Estratégica</h3>
+                    <p>Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
+                </div>
+                <div class="service-card">
+                    <h3><img src="empathy.png" alt="Ícone de ETL" class="icone-titulo"> ETL e Integração</h3>
+                    <p>Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
+                </div>
+                <div class="service-card">
+                    <h3><img src="team.png" alt="Ícone de Otimização" class="icone-titulo"> Otimização de Processos</h3>
+                    <p>Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="precos">
-        <h2>Nossos Planos</h2>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Básico</h3>
-                <div class="price">R$ 2.500<span>/mês</span></div>
-                <p class="description">Ideal para pequenas empresas que estão começando sua jornada em análise de dados.</p>
-                <ul class="features-list">
-                    <li>Análise exploratória mensal</li>
-                    <li>Dashboard básico com 5 KPIs</li>
-                    <li>Relatório mensal em PDF</li>
-                    <li>Suporte por e-mail</li>
-                    <li>1 reunião mensal</li>
-                </ul>
-                <a href="#contato" class="pricing-button">Contratar Plano</a>
-            </div>
+        <div class="container">
+            <h2>Nossos Planos</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <div class="price">R$ 2.500<span>/mês</span></div>
+                    <p class="description">Ideal para pequenas empresas que estão começando sua jornada em análise de dados.</p>
+                    <ul class="features-list">
+                        <li>Análise exploratória mensal</li>
+                        <li>Dashboard básico com 5 KPIs</li>
+                        <li>Relatório mensal em PDF</li>
+                    </ul>
+                    <a href="#contato" class="pricing-button">Contratar Plano</a>
+                </div>
 
-            <div class="pricing-card featured">
-                <span class="badge">Mais Popular</span>
-                <h3>Profissional</h3>
-                <div class="price">R$ 5.500<span>/mês</span></div>
-                <p class="description">Para empresas que buscam insights avançados e dashboards interativos completos.</p>
-                <ul class="features-list">
-                    <li>Tudo do plano Básico</li>
-                    <li>Dashboard interativo completo</li>
-                    <li>Análises preditivas mensais</li>
-                    <li>Integração com até 3 fontes de dados</li>
-                    <li>Suporte prioritário</li>
-                    <li>4 reuniões mensais</li>
-                </ul>
-                <a href="#contato" class="pricing-button">Contratar Plano</a>
-            </div>
+                <div class="pricing-card featured">
+                    <span class="badge">Mais Popular</span>
+                    <h3>Profissional</h3>
+                    <div class="price">R$ 5.500<span>/mês</span></div>
+                    <p class="description">Para empresas que buscam insights avançados e dashboards interativos.</p>
+                    <ul class="features-list">
+                        <li>Tudo do plano Básico</li>
+                        <li>Dashboard interativo completo</li>
+                        <li>Análises preditivas mensais</li>
+                    </ul>
+                    <a href="#contato" class="pricing-button">Contratar Plano</a>
+                </div>
 
-            <div class="pricing-card">
-                <h3>Empresarial</h3>
-                <div class="price">R$ 12.000<span>/mês</span></div>
-                <p class="description">Solução completa para grandes empresas com necessidades complexas de análise.</p>
-                <ul class="features-list">
-                    <li>Tudo do plano Profissional</li>
-                    <li>Múltiplos dashboards customizados</li>
-                    <li>Machine Learning avançado</li>
-                    <li>ETL automatizado ilimitado</li>
-                    <li>Consultoria estratégica dedicada</li>
-                    <li>Suporte 24/7</li>
-                    <li>Reuniões ilimitadas</li>
-                </ul>
-                <a href="#contato" class="pricing-button">Contratar Plano</a>
-            </div>
-
-            <div class="pricing-card custom-quote-card">
-                <h3><img src="ruler-and-pencil.png" alt="Ícone de Projeto Customizado" class="icone-titulo"> Projeto Customizado</h3>
-                <p>Precisa de algo específico? Criamos soluções sob medida para atender às necessidades únicas do seu negócio.</p>
-                <a href="#contato" class="pricing-button">Solicitar Orçamento</a>
+                <div class="pricing-card">
+                    <h3>Empresarial</h3>
+                    <div class="price">R$ 12.000<span>/mês</span></div>
+                    <p class="description">Solução completa para grandes empresas com necessidades complexas.</p>
+                    <ul class="features-list">
+                        <li>Tudo do Profissional</li>
+                        <li>Consultoria dedicada</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                    <a href="#contato" class="pricing-button">Contratar Plano</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <div class="about">
-            <p>A Apolo Análise de Dados é uma consultoria especializada em transformar dados brutos em inteligência de negócio acionável. Com uma equipe de especialistas em ciência de dados, estatística e business intelligence, ajudamos empresas de diversos setores a tomarem decisões mais assertivas baseadas em evidências.</p>
-            <p>Nossa missão é democratizar o acesso à análise de dados avançada, tornando-a acessível e compreensível para organizações de todos os tamanhos. Acreditamos que dados bem interpretados são o diferencial competitivo do século XXI.</p>
-            <p>Utilizamos as mais modernas ferramentas e metodologias do mercado, sempre com foco em entregar valor real e mensurável para nossos clientes.</p>
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="about">
+                <p>A Apolo Análise de Dados é uma consultoria especializada em transformar dados brutos em inteligência de negócio acionável.</p>
+                <p>Nossa missão é democratizar o acesso à análise de dados avançada, tornando-a acessível para organizações de todos os tamanhos.</p>
+            </div>
         </div>
     </section>
 
-    <!-- CONTATO -->
-<section id="contato">
-  <h2>Entre em Contato</h2>
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="meu-formulario" action="https://script.google.com/macros/s/AKfycbympDInhl0nwYj3VkwR92gF8PuWq6nOq5RtwnSDaz0F1qA26Fbr9soEyx3VJDfhqC_X/exec" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" />
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit" class="cta-button" id="btn-enviar">Enviar Mensagem</button>
+            </form>
+            <div id="mensagem-sucesso" style="display:none; color: #faf899; margin-top: 20px; font-weight: bold; text-align: center;">
+                Obrigado! Sua mensagem foi enviada com sucesso.
+            </div>
+        </div>
+    </section>
 
-  <form id="meu-formulario" action="https://script.google.com/macros/s/AKfycbympDInhl0nwYj3VkwR92gF8PuWq6nOq5RtwnSDaz0F1qA26Fbr9soEyx3VJDfhqC_X/exec" method="POST">
-    <div class="form-group">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required />
-    </div>
+    <a href="https://wa.me/55SEUNUMERO?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.408 1.408-5.245-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.467 6.533-14 14-14s14 6.533 14 14-6.533 13.576-14 13.576zM21.803 18.997c-0.256-0.128-1.518-0.748-1.753-0.834-0.235-0.085-0.405-0.128-0.575 0.128s-0.661 0.834-0.81 1.005c-0.149 0.171-0.299 0.192-0.555 0.064-0.256-0.128-1.081-0.399-2.059-1.271-0.761-0.679-1.275-1.518-1.424-1.774s-0.016-0.394 0.112-0.522c0.115-0.115 0.256-0.299 0.384-0.448s0.171-0.256 0.256-0.427c0.085-0.171 0.043-0.320-0.021-0.448s-0.575-1.387-0.788-1.899c-0.208-0.498-0.419-0.43-0.575-0.438-0.149-0.008-0.320-0.010-0.491-0.010s-0.448 0.064-0.683 0.320c-0.235 0.256-0.896 0.875-0.896 2.133s0.917 2.475 1.045 2.645c0.128 0.171 1.805 2.755 4.373 3.863 0.611 0.264 1.088 0.422 1.459 0.54 0.613 0.195 1.171 0.168 1.613 0.102 0.492-0.074 1.518-0.621 1.733-1.22 0.214-0.6 0.214-1.115 0.149-1.22-0.064-0.106-0.235-0.171-0.491-0.299z"/>
+        </svg>
+    </a>
 
-    <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required />
-    </div>
-
-    <div class="form-group">
-        <label for="empresa">Empresa</label>
-        <input type="text" id="empresa" name="empresa" />
-    </div>
-
-    <div class="form-group">
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
-    </div>
-
-      <button type="submit" class="cta-button" id="btn-enviar">
-      Enviar Mensagem
-    </button>
-  </form>
-
-  <div id="mensagem-sucesso" style="display:none; color: green; margin-top: 20px;">
-    Obrigado! Sua mensagem foi enviada com sucesso.
-  </div>
-</section>
-     <!-- Cole este código no seu HTML onde quiser o botão -->
-<a href="https://wa.me/5548999999999?text=Olá,%20gostaria%20de%20mais%20informações" 
-   class="whatsapp-float" 
-   target="_blank"
-   rel="noopener noreferrer">
-    <svg class="whatsapp-icon" viewBox="0 0 32 32">
-        <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.408 1.408-5.245-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.467 6.533-14 14-14s14 6.533 14 14-6.533 13.576-14 13.576zM21.803 18.997c-0.256-0.128-1.518-0.748-1.753-0.834-0.235-0.085-0.405-0.128-0.575 0.128s-0.661 0.834-0.81 1.005c-0.149 0.171-0.299 0.192-0.555 0.064-0.256-0.128-1.081-0.399-2.059-1.271-0.761-0.679-1.275-1.518-1.424-1.774s-0.016-0.394 0.112-0.522c0.115-0.115 0.256-0.299 0.384-0.448s0.171-0.256 0.256-0.427c0.085-0.171 0.043-0.320-0.021-0.448s-0.575-1.387-0.788-1.899c-0.208-0.498-0.419-0.43-0.575-0.438-0.149-0.008-0.320-0.010-0.491-0.010s-0.448 0.064-0.683 0.320c-0.235 0.256-0.896 0.875-0.896 2.133s0.917 2.475 1.045 2.645c0.128 0.171 1.805 2.755 4.373 3.863 0.611 0.264 1.088 0.422 1.459 0.54 0.613 0.195 1.171 0.168 1.613 0.102 0.492-0.074 1.518-0.621 1.733-1.22 0.214-0.6 0.214-1.115 0.149-1.22-0.064-0.106-0.235-0.171-0.491-0.299z"/>
-    </svg>
-</a>
     <footer>
         <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-<script>
-  const formulario = document.getElementById('meu-formulario');
-  const btnEnviar = document.getElementById('btn-enviar');
-  const msgSucesso = document.getElementById('mensagem-sucesso');
+    <script>
+        const formulario = document.getElementById('meu-formulario');
+        const btnEnviar = document.getElementById('btn-enviar');
+        const msgSucesso = document.getElementById('mensagem-sucesso');
 
-  formulario.addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede o navegador de abrir a nova guia
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault();
+            btnEnviar.innerText = "Enviando...";
+            btnEnviar.disabled = true;
 
-    btnEnviar.innerText = "Enviando...";
-    btnEnviar.disabled = true;
+            const dados = new FormData(formulario);
 
-    const dados = new FormData(formulario);
-
-    fetch(formulario.action, {
-      method: 'POST',
-      body: dados,
-      mode: 'no-cors' // Importante para evitar erros de redirecionamento do Google
-    })
-    .then(() => {
-      // O que acontece após o envio
-      formulario.style.display = 'none'; // Esconde o formulário
-      msgSucesso.style.display = 'block'; // Mostra a mensagem de sucesso
-    })
-    .catch(error => {
-      console.error('Erro!', error.message);
-      btnEnviar.innerText = "Erro ao enviar. Tente novamente.";
-      btnEnviar.disabled = false;
-    });
-  });
-</script>
+            fetch(formulario.action, {
+                method: 'POST',
+                body: dados,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                formulario.style.display = 'none';
+                msgSucesso.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Erro!', error.message);
+                btnEnviar.innerText = "Erro ao enviar. Tente novamente.";
+                btnEnviar.disabled = false;
+            });
+        });
+    </script>
 </body>
 </html>
