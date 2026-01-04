@@ -1,3 +1,13 @@
+/* ========== VARIÁVEIS DE CORES ========== */
+:root {
+    --cor-primaria: #2c3f4d;      /* Azul petróleo escuro */
+    --cor-secundaria: #ebf1ea;     /* Verde claro suave */
+    --cor-destaque: #5a7a8f;       /* Azul intermediário */
+    --cor-texto-claro: #ebf1ea;
+    --cor-texto-escuro: #2c3f4d;
+    --cor-acento: #7ba591;         /* Verde suave para acentos */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +15,22 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #811304;
-    color: #fffad1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     line-height: 1.6;
 }
 
+/* ========== HEADER E NAVEGAÇÃO ========== */
 header {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(44, 63, 77, 0.95);
     padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -33,58 +45,39 @@ nav {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #e9c915;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: auto;
+    color: var(--cor-acento);
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: auto;
-
 }
 
 .nav-links a {
-    color: #f7efc4;
-    font-size: auto;
-    max-inline-size: 1.4rem;
+    color: var(--cor-secundaria);
+    font-size: 1rem;
     text-decoration: none;
-    transition: opacity 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    opacity: 0.7;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: auto;
+    color: var(--cor-acento);
 }
 
-/* ========== SEÇÃO HERO (AJUSTADA) ========== */
-
+/* ========== SEÇÃO HERO ========== */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0; /* Remove o padding das outras sections para ocupar 100% da altura */
-    
-    /* O segredo do fundo: Usamos um gradiente escuro em cima da imagem para o texto brilhar */
-    background: linear-gradient(rgba(129, 19, 4, 0.7), rgba(129, 19, 4, 0.7)), 
-                url('Apolov1.png'); 
-    background-size: cover;       /* Faz a imagem preencher a tela toda sem sobrar espaço */
-    background-position: center;  /* Mantém o centro da imagem visível */
+    padding: 0;
+    background: linear-gradient(rgba(44, 63, 77, 0.85), rgba(44, 63, 77, 0.85)), 
+                url('Apolov1.png');
+    background-size: auto;
+    background-position: center;
     background-repeat: no-repeat;
-    /* Removi a opacity: 0.75 daqui porque ela deixa o texto transparente também. 
-       O gradiente acima faz o trabalho de escurecer o fundo melhor! */
 }
 
 .hero-content {
@@ -94,12 +87,11 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 8vw, 3.8rem);/* Fonte que se ajusta ao tamanho da tela */
-    font-weight:600;
+    font-size: clamp(2.5rem, 8vw, 3.8rem);
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
-    color: #faf899;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra suave para destacar o título */
+    color: var(--cor-secundaria);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
@@ -107,50 +99,82 @@ nav {
     margin-bottom: 2.5rem;
     opacity: 0.95;
     animation: fadeInUp 1s ease 0.2s backwards;
-    color: #fffde3;
-    max-width: 800px; /* Evita que o parágrafo fique largo demais e ruim de ler */
+    color: var(--cor-secundaria);
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .cta-button {
-    background-color: #f7efc4;
-    color: #9e2828;
+    background-color: var(--cor-acento);
+    color: white;
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
-    font-weight:600;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     animation: fadeInUp 1s ease 0.4s backwards;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(247, 239, 196, 0.3);
+    box-shadow: 0 10px 20px rgba(123, 165, 145, 0.3);
+    background-color: #8bb9a1;
 }
 
+/* ========== CONTAINERS DE SEÇÕES ========== */
 section {
-    width: 100%;       /* Ocupa toda a largura da tela */
-    padding: 100px 0;  /* Espaçamento vertical generoso */
-    margin: 0;         /* Remove margens externas */
+    width: 100%;
+    padding: 100px 0;
+    margin: 0;
 }
 
 .container {
-    max-width: 1200px; /* Limita a largura do conteúdo */
-    margin: 0 auto;    /* Centraliza o conteúdo no meio da tela */
-    padding: 0 2rem;   /* Evita que o texto encoste nas bordas em celulares */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem;
 }
 
+/* Cores de fundo para cada seção */
+#servicos {
+    background-color: #ebf1ea; /* Fundo claro */
+}
+
+#servicos h2,
+#servicos .service-card h3 {
+    color: var(--cor-primaria);
+}
+
+#servicos .service-card p {
+    color: #3a4f5e;
+}
+
+#precos {
+    background-color: #d4ddd8; /* Tom intermediário */
+}
+
+#precos h2 {
+    color: var(--cor-primaria);
+}
+
+#sobre {
+    background-color: var(--cor-primaria); /* Fundo escuro */
+}
+
+#contato {
+    background-color: #1e2d38; /* Fundo mais escuro */
+}
+
+/* ========== TÍTULOS ========== */
 h2 {
     font-size: 2.5rem;
-    font-weight:600;
     margin-bottom: 3rem;
     text-align: center;
 }
 
+/* ========== CARDS DE SERVIÇOS ========== */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -158,31 +182,40 @@ h2 {
 }
 
 .service-card {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: white;
     padding: 2rem;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid rgba(247, 239, 196, 0.1);
+    border: 2px solid rgba(123, 165, 145, 0.2);
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(247, 239, 196, 0.3);
+    box-shadow: 0 15px 30px rgba(44, 63, 77, 0.15);
+    border-color: var(--cor-acento);
 }
 
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #f7efc4;
+    color: var(--cor-primaria);
 }
 
 .service-card p {
     opacity: 0.9;
+    color: #3a4f5e;
 }
 
-/* ========== ESTILOS DA SEÇÃO DE PREÇOS ========== */
+/* ========== ÍCONES DOS TÍTULOS ========== */
+.icone-titulo {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    opacity: 0.9;
+}
 
+/* ========== SEÇÃO DE PREÇOS ========== */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -191,10 +224,10 @@ h2 {
 }
 
 .pricing-card {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: white;
     border-radius: 15px;
     padding: 2.5rem 2rem;
-    border: 2px solid rgba(247, 239, 196, 0.1);
+    border: 2px solid rgba(123, 165, 145, 0.2);
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     display: flex;
     flex-direction: column;
@@ -203,21 +236,21 @@ h2 {
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(247, 239, 196, 0.4);
+    box-shadow: 0 15px 30px rgba(44, 63, 77, 0.15);
+    border-color: var(--cor-acento);
 }
 
 .pricing-card.featured {
-    border-color: #f7efc4;
-    background-color: rgba(247, 239, 196, 0.05);
+    border-color: var(--cor-acento);
+    background-color: rgba(123, 165, 145, 0.05);
 }
 
 .pricing-card.featured .badge {
     position: absolute;
     top: -15px;
     right: 20px;
-    background-color: #f7efc4;
-    color: #9e2828;
+    background-color: var(--cor-acento);
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -227,19 +260,19 @@ h2 {
 .pricing-card h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #f7efc4;
+    color: var(--cor-primaria);
 }
 
 .price {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #faf899;
+    color: var(--cor-primaria);
     margin-bottom: 0.5rem;
 }
 
 .price span {
     font-size: 1rem;
-    color: #f7efc4;
+    color: #5a7a8f;
     opacity: 0.8;
 }
 
@@ -248,6 +281,7 @@ h2 {
     margin-bottom: 2rem;
     font-size: 0.95rem;
     flex-grow: 1;
+    color: #3a4f5e;
 }
 
 .features-list {
@@ -257,22 +291,23 @@ h2 {
 
 .features-list li {
     padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(247, 239, 196, 0.1);
+    border-bottom: 1px solid rgba(44, 63, 77, 0.1);
     opacity: 0.9;
+    color: #3a4f5e;
 }
 
 .features-list li:before {
     content: "✓ ";
-    color: #faf899;
+    color: var(--cor-acento);
     font-weight: bold;
     margin-right: 0.5rem;
 }
 
 .pricing-button {
-    background-color: rgba(247, 239, 196, 0.1);
-    color: #f7efc4;
+    background-color: rgba(123, 165, 145, 0.1);
+    color: var(--cor-primaria);
     padding: 1rem 2rem;
-    border: 2px solid rgba(247, 239, 196, 0.3);
+    border: 2px solid var(--cor-acento);
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
@@ -283,47 +318,26 @@ h2 {
 }
 
 .pricing-button:hover {
-    background-color: #f7efc4;
-    color: #9e2828;
-    border-color: #f7efc4;
+    background-color: var(--cor-acento);
+    color: white;
     transform: scale(1.05);
 }
 
 .pricing-card.featured .pricing-button {
-    background-color: #f7efc4;
-    color: #9e2828;
-    border-color: #f7efc4;
+    background-color: var(--cor-acento);
+    color: white;
 }
 
 .pricing-card.featured .pricing-button:hover {
-    background-color: #fff899;
-    border-color: #fff899;
+    background-color: #8bb9a1;
 }
 
-.custom-quote-card {
-    background: linear-gradient(135deg, rgba(247, 239, 196, 0.1) 0%, rgba(247, 239, 196, 0.05) 100%);
-    border: 2px solid #f7efc4;
-    text-align: center;
-}
-
-.custom-quote-card h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.custom-quote-card p {
-    font-size: 1.1rem;
-    color: rgb(230, 214, 214);
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-/* ========== FIM DOS ESTILOS DA SEÇÃO DE PREÇOS ========== */
-
+/* ========== SEÇÃO SOBRE ========== */
 .about {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(90, 122, 143, 0.15);
     border-radius: 15px;
     padding: 3rem;
+    border: 2px solid rgba(123, 165, 145, 0.2);
 }
 
 .about p {
@@ -332,6 +346,7 @@ h2 {
     opacity: 0.9;
 }
 
+/* ========== FORMULÁRIO DE CONTATO ========== */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -344,22 +359,24 @@ h2 {
 label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: bold;
+    color: var(--cor-secundaria);
 }
 
 input, textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid rgba(247, 239, 196, 0.3);
+    border: 2px solid rgba(123, 165, 145, 0.3);
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #f7efc4;
+    background-color: rgba(235, 241, 234, 0.1);
+    color: var(--cor-secundaria);
     font-size: 1rem;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #f7efc4;
+    border-color: var(--cor-acento);
+    background-color: rgba(235, 241, 234, 0.15);
 }
 
 textarea {
@@ -367,53 +384,7 @@ textarea {
     min-height: 150px;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin-top: 3rem;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-}
-.icone-titulo {
-    size: small;
-    opacity: 0.9;
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    margin-right: 10px;
-    color: #e9c915;
-}
-/* Cole este CSS no seu arquivo style.css */
-
+/* ========== BOTÃO WHATSAPP ========== */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -464,30 +435,42 @@ footer {
     opacity: 1;
 }
 
-/* Seção de Serviços - Mantém o tom atual */
-#servicos {
-    background-color: #811304; 
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(30, 45, 56, 0.8);
+    margin-top: 0;
 }
 
-/* Seção de Preços - Um tom levemente mais claro para destacar os planos */
-#precos {
-    background-color: #9e2828; 
+/* ========== ANIMAÇÕES ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Seção Sobre - Um tom mais escuro/sóbrio para contraste */
-#sobre {
-    background-color: #1a1a1a; 
-    color: #fffad1;
-}
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
 
-/* Seção de Contato - Fundo mais fechado para focar no formulário */
-#contato {
-    background-color: #2b0601;
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
-
-#mensagem-sucesso {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-}
-
