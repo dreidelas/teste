@@ -518,3 +518,36 @@ footer {
         max-width: 92%;  /* ← Pouco mais de espaço nas laterais */
     }
 }
+/* ========== SEÇÃO DEPOIMENTOS ========== */
+#depoimentos {
+    background-color: #d4ddd8;
+}
+
+#depoimentos h2 {
+    color: var(--cor-primaria);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.depoimento-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(123, 165, 145, 0.2);
+}
+
+.depoimento-card p {
+    font-style: italic;
+    color: #3a4f5e;
+    margin-bottom: 1rem;
+}
+
+.cliente {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
