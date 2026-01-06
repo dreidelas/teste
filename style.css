@@ -3,9 +3,9 @@
     /* Cores base */
     --cor-primaria: #2c3f4d;
     --cor-primaria-escura: #1f2c36;
-    --cor-secundaria: #ebf1ea;
+    --cor-secundaria: #eaf1f1;
     --cor-destaque: #5a7a8f;
-    --cor-acento: #7ba591;
+    --cor-acento: ##01afff;
 
     /* Texto */
     --cor-texto-claro: #ebf1ea;
@@ -171,7 +171,7 @@ section:not(.hero) {
 
 /* Cores de fundo para cada seção */
 #servicos {
-    background-color: #ebf1ea; /* Fundo claro */
+    background-color: #f5fdff; /* Fundo claro */
 }
 
 #servicos h2,
