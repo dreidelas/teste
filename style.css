@@ -1,13 +1,22 @@
 /* ========== VARIÁVEIS DE CORES ========== */
 :root {
+    /* Cores base */
     --cor-primaria: #2c3f4d;      /* Azul petróleo escuro */
-    --cor-secundaria: #ebf1ea;     /* Verde claro suave */
-    --cor-destaque: #5a7a8f;       /* Azul intermediário */
+    --cor-primaria-escura: #1f2c36; /* 30% mais escuro */
+    --cor-secundaria: #ebf1ea;    /* Verde claro suave */
+    --cor-destaque: #5a7a8f;      /* Azul intermediário */
+    --cor-acento: #7ba591;
+
+    /* Texto */
     --cor-texto-claro: #ebf1ea;
     --cor-texto-escuro: #2c3f4d;
-    --cor-acento: #7ba591;         /* Verde suave para acentos */
-}
 
+    /* Gradiente */
+    --gradiente-primario: linear-gradient(
+        135deg,
+        var(--cor-primaria),
+        var(--cor-primaria-escura)
+    );
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +82,7 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 0;
-    background: linear-gradient(rgba(44, 63, 77, 0.85), rgba(44, 63, 77, 0.85)), 
+    background: var(--gradiente-primario), 
                 url('Apolov2.png');
     background-size: 40%;
     background-position: center;
