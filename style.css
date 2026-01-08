@@ -585,3 +585,222 @@ footer {
     font-weight: bold;
     color: var(--cor-primaria);
 }
+/*ajuste de responsividade para mobile e pc
+/* ========== CORREÇÕES PARA RESPONSIVIDADE MOBILE ========== */
+/* Adicione estas regras no final do seu arquivo style.css */
+
+/* Ajustes gerais para mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Reduz o padding superior */
+    }
+
+    /* ========== HEADER E NAVEGAÇÃO ========== */
+    header {
+        padding: 1rem 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+        min-height: 80vh;
+        background-size: cover, 60%; /* Aumenta o tamanho do logo em mobile */
+    }
+
+    .hero-content {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* ========== CONTAINERS ========== */
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    section:not(.hero) {
+        padding: 60px 0;
+    }
+
+    /* ========== TÍTULOS ========== */
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ========== CARDS DE SERVIÇOS ========== */
+    .services {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .icone-titulo {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ========== PREÇOS ========== */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pricing-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    /* ========== SOBRE ========== */
+    .about {
+        padding: 2rem 1.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    /* ========== FORMULÁRIO ========== */
+    input, textarea {
+        font-size: 16px; /* Evita zoom automático em iOS */
+    }
+
+    /* ========== DASHBOARD ========== */
+    .dashboard-intro {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    .dashboard-note {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+
+    /* ========== DEPOIMENTOS ========== */
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .depoimento-card {
+        padding: 1.5rem;
+    }
+
+    /* ========== WHATSAPP ========== */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .whatsapp-float::before {
+        display: none; /* Remove o texto "Fale conosco" em mobile */
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== AJUSTES EXTRAS PARA CELULARES PEQUENOS ========== */
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ========== MELHORIAS GERAIS ========== */
+/* Previne zoom horizontal indesejado */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Melhora o toque em elementos clicáveis */
+@media (max-width: 768px) {
+    a, button, .cta-button, .pricing-button {
+        min-height: 44px; /* Tamanho mínimo recomendado para toque */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
