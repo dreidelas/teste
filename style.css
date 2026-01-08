@@ -12,10 +12,10 @@
     --cor-texto-escuro: #2c3f4d;
 
     /* Gradiente */
-    --gradiente-primario: linear-gradient(
+  --gradiente-primario: linear-gradient(
         135deg,
-        rgba(44, 63, 77, 0.55), 
-        rgba(1, 2, 4, 0.40)
+        rgba(0, 0, 0, 0.90), 
+        rgba(44, 63, 77, 0.95)
     );
     /* Fontes */
     --fonte-principal: 'Montserrat', sans-serif;
