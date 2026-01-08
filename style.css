@@ -101,7 +101,7 @@ nav {
 
     background-image:
         var(--gradiente-primario),
-        url('Apolov2.png');
+        url('logo.png');
 
     background-size:
         cover,
