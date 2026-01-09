@@ -10,7 +10,7 @@
 
     background-image:
         var(--gradiente-primario),
-        url('logo.png');
+        url('../logo.png');
 
     background-size:
         cover,
@@ -109,11 +109,12 @@
 /* #endregion */
 
 /* #region ========== SEÇÃO NOSSA PROPOSTA ========== */
-#proposta {color: var(--cor-intermediario);
+#proposta {
+    color: var(--cor-intermediario);
+    padding:0px;
 }
 
-#proposta h2 {
-    color: var(--cor-primaria);
+#proposta h2 {display: none;
 }
 
 .proposta-intro {
