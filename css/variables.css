@@ -1,0 +1,29 @@
+/* #region ========== VARIÁVEIS ========== */
+:root {
+    /* Cores base */
+    --cor-primaria: #2c3f4d;
+    --cor-primaria-escura: #1f2c36;
+    --cor-secundaria: #eaf1f1;
+    --cor-destaque: #5a7a8f;
+    --cor-acento: #01afff;
+    --cor-intermediario: #2c3f4d;
+
+    /* Texto */
+    --cor-texto-claro: #ebf1ea;
+    --cor-texto-escuro: #2c3f4d;
+
+    /* Gradiente */
+  --gradiente-primario: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.90), 
+        rgba(44, 63, 77, 0.95)
+    );
+    
+    /* Fontes */
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* Dimensões */
+    --altura-header: 4rem;
+}
+/* #endregion */

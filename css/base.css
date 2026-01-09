@@ -1,0 +1,49 @@
+/* #region ========== BASE / TIPOGRAFIA ========== */
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    line-height: 1.6;
+    padding-top: var(--altura-header);
+}
+/* #endregion */
+
+/* #region ========== TÍTULOS ========== */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region ========== ANIMAÇÕES ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* #endregion */
+
+/* #region ========== MELHORIAS GERAIS ========== */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+/* Melhora o toque em elementos clicáveis */
+@media (max-width: 768px) {
+    a, button, .cta-button, .pricing-button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* #endregion */

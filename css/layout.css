@@ -1,0 +1,46 @@
+/* #region ========== CONTAINERS DE SEÇÕES ========== */
+section:not(.hero) {
+    width: 100%;
+    padding: 100px 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+/* Definição de Cores de Fundo */
+#proposta { background-color: var(--cor-intermediario); } 
+#servicos { background-color: #f5fdff; }
+#precos   { background-color: var(--cor-secundaria); }
+#sobre    { background-color: var(--cor-primaria); }
+#contato  { background-color: #1e2d38; }
+
+/* Cores de Texto (Agrupadas por similaridade) */
+#servicos h2,
+#precos h2,
+#servicos .service-card h3 {
+    color: var(--cor-primaria);
+}
+
+#servicos .service-card p {
+    color: #3a4f5e;
+}
+/* #endregion */
+
+/* #region ========== GRIDS E ALINHAMENTOS GERAIS ========== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+/* #endregion */
