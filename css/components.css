@@ -111,7 +111,6 @@
 /* #region ========== SEÇÃO NOSSA PROPOSTA ========== */
 #proposta {
     color: var(--cor-intermediario);
-    padding: 0px;
     background: linear-gradient(135deg, #1a2a35 0%, #2c3f4d 50%, #1f2c36 100%);
 }
 
@@ -733,7 +732,7 @@ footer p {
     }
 
     section:not(.hero) {
-        padding: 0px 0;
+        padding: 60px 0;
     }
 
     /* ========== TÍTULOS ========== */
